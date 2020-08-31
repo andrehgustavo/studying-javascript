@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <script>
+        function imprimirTela(usuarios){
+            for (const user of usuarios) {
+                console.log('O ' + user.nome + ' possui as habilidades: ' + user.habilidades.join());
+            }
+        }
+
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+    
+    imprimirTela(usuarios);
+    </script>
+</body>
+
+</html>

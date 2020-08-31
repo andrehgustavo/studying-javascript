@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios 2</title>
+</head>
+
+<body>
+    <button name="botao">Novo Quadrado</button>
+
+    <div id="squares">
+
+    </div>
+
+    <script>
+
+        var buttonElement = document.querySelector('button[name=botao]');
+        var squaresElement = document.querySelector('#squares');
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+
+        buttonElement.onclick = function () {
+
+            var boxElement = document.createElement('div');
+            boxElement.className = 'box';
+            boxElement.style.width = '100px';
+            boxElement.style.height = '100px';
+            boxElement.style.backgroundColor = '#f00';
+            boxElement.style.marginTop = '10px';
+
+            boxElement.onmouseover = function () {
+                var newColor = getRandomColor(); // #E943F0
+                boxElement.style.backgroundColor = newColor;
+            }
+
+            squaresElement.appendChild(boxElement);
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
